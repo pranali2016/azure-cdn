@@ -188,7 +188,7 @@ class Azure_Plugin_Base {
 		$account_name = $azure->get_access_account_name();
 		$account_key = $azure->get_access_account_key();
 		$connection_string = '';
-		if( isset($access_protocol) && isset($account_name) && isset($account_key)){
+		if( !empty($access_protocol) && !empty($account_name) && !empty($account_key)){
 			$connection_string = "DefaultEndpointsProtocol=".$access_protocol.";AccountName=".$account_name.";AccountKey=".$account_key;
 		}
 
